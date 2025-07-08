@@ -2,8 +2,9 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.aem.page/
-- Live: https://main--{repo}--{owner}.aem.live/
+- Preview: https://main--blog--mateuslopesbh.aem.page/
+- Live: https://main--blog--mateuslopesbh.aem.live/
+- Prod(CloudFlare): https://bymattlopes.com 
 
 ## Documentation
 
