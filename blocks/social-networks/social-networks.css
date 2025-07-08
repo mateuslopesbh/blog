@@ -1,0 +1,10 @@
+.social-networks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.social-networks a { margin-right: 5px;}
