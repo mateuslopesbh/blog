@@ -4,7 +4,7 @@ export default function decorate(block) {
   // Build a <ul> with <li> for each row
   const ul = document.createElement('ul');
   ul.className = 'item-list';
-  [...block.children].forEach((row) => {
+  [...block.children].forEach((row, rowIndex) => {
     const li = document.createElement('li');
     let linkHref = null;
     // Move all children of row into li as divs, and find the first link
@@ -22,6 +22,22 @@ export default function decorate(block) {
         div.className = 'item-list-card-body';
       }
     });
+    // For 2nd and 3rd items, wrap all .item-list-card-body in a wrapper
+    if (rowIndex === 1 || rowIndex === 2) {
+      const bodies = li.querySelectorAll('.item-list-card-body');
+      if (bodies.length > 1) {
+        const bodyWrapper = document.createElement('div');
+        bodyWrapper.className = 'item-list-card-body-wrapper';
+        bodies.forEach((body) => bodyWrapper.appendChild(body));
+        // Insert after image if present, else at start
+        const img = li.querySelector('.item-list-card-image');
+        if (img && img.nextSibling) {
+          li.insertBefore(bodyWrapper, img.nextSibling);
+        } else {
+          li.appendChild(bodyWrapper);
+        }
+      }
+    }
     // If a link was found, wrap all li content in an <a>
     if (linkHref) {
       const a = document.createElement('a');
