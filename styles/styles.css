@@ -268,3 +268,12 @@ main {
 footer {
   flex-shrink: 0;
 }
+
+/* Post Image */
+main .center-image {
+  text-align: center;
+}
+
+main .center-image img {
+  max-height: 500px; 
+}
