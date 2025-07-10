@@ -4,7 +4,7 @@ export default function decorate(block) {
   // Build a <ul> with <li> for each row
   const ul = document.createElement('ul');
   ul.className = 'item-list';
-  [...block.children].forEach((row, rowIndex) => {
+  [...block.children].forEach((row) => {
     const li = document.createElement('li');
     let linkHref = null;
     // Move all children of row into li as divs, and find the first link
@@ -50,7 +50,7 @@ export default function decorate(block) {
   // Optimize all images
   ul.querySelectorAll('picture > img').forEach((img) => {
     img.closest('picture').replaceWith(
-      createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])
+      createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }]),
     );
   });
   block.textContent = '';
