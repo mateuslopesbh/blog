@@ -1,13 +1,17 @@
-.section-title { margin-bottom: 2rem; }
-.section-title h2 {
-    text-transform: uppercase;
-    width: fit-content;
+.section-title {
+  margin-bottom: 2rem;
 }
+
+.section-title h2 {
+  text-transform: uppercase;
+  width: fit-content;
+}
+
 .section-title h2::after {
-    content: '';
-    display: block;
-    width: 15%;
-    height: 5px;
-    background-color: var(--link-color);
-    border-radius: 16px;
+  content: '';
+  display: block;
+  width: 15%;
+  height: 5px;
+  background-color: var(--link-color);
+  border-radius: 16px;
 }
