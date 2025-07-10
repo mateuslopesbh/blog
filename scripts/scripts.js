@@ -28,7 +28,6 @@ function buildHeroBlock(main) {
   }
 }
 
-
 /**
  * Handles external links and PDFs to be opened in a new tab/window
  * @param {Element} main The main element
@@ -47,7 +46,6 @@ export function decorateExternalLinks(main) {
     }
   });
 }
-
 
 /**
  * load fonts.css and set a session storage flag
