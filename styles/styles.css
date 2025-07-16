@@ -277,3 +277,7 @@ main .center-image {
 main .center-image img {
   max-height: 500px; 
 }
+
+main .hm-200 img {
+  max-height: 200px; 
+}
